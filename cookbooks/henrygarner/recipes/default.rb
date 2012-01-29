@@ -51,7 +51,6 @@ deploy_revision node['id'] do
       cwd release_path
     end
   end
-  #restart_command "sudo service #{node['id']} restart"
 end
 
 # Configure Nginx #
@@ -87,6 +86,5 @@ end
 
 service node['id'] do
   provider Chef::Provider::Service::Upstart
-  action :start
-  restart_command "stop #{node['id']} && start #{node['id']}"
+  action :restart
 end
