@@ -1,0 +1,32 @@
+## This file rendered by Chef ##
+## Local changes will be nuked from orbit ##
+
+# Original configuration with helpful comments
+# http://unicorn.bogomips.org/examples/nginx.conf
+
+upstream unicorn {
+  server 0.0.0.0:8080 fail_timeout=0;
+}
+
+server {
+  listen 80 default deferred;
+  client_max_body_size 4G;
+  server_name _;
+  keepalive_timeout 5;
+
+  root <%= @node['deploy_to'] %>/current/public;
+
+  location / {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+	proxy_set_header Host $http_host;
+	proxy_redirect off;
+
+    # If you don't find the filename in the static files
+    # Then request it from unicorn
+    if (!-f $request_filename) {
+      proxy_pass http://unicorn;
+      break;
+    }
+  }
+}

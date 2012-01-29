@@ -1,0 +1,17 @@
+{
+  "id" : "henrygarner.com",
+  "repository" : "git@github.com:henrygarner/henrygarner.com.git",
+  "deploy_to" : "/srv/henrygarner.com",
+  "revision" : "HEAD",
+  "gems": {
+    "bundler": "",
+    "unicorn": ""
+  },
+  "packages": {
+    "zlib1g": "",
+    "zlib1g-dev": "",
+    "libxml2-dev": "",
+    "libxslt1-dev": ""
+  },
+  "run_list": ["recipe[henrygarner::default]"]
+}

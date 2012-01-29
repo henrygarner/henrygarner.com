@@ -1,0 +1,13 @@
+## This file rendered by Chef ##
+## Local changes will be nuked from orbit ##
+
+# <%= @node['id'] %> - run the <%= @node['id'] %> application
+
+# This task starts Unicorn web workers using <%= @node['id'] %>'s configuration
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+respawn
+
+chdir <%= @node['deploy_to'] %>/current
+exec bundle exec unicorn -E production -c /etc/unicorn/<%= @node['id'] %>.rb
