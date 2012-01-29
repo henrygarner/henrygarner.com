@@ -5,15 +5,21 @@ GEM
     RedCloth (4.2.9)
     blankslate (2.1.2.4)
     haml (3.1.4)
+    kgio (2.7.2)
     libxml-ruby (2.2.2)
     parslet (1.2.3)
       blankslate (~> 2.0)
     rack (1.4.1)
     rack-test (0.6.1)
       rack (>= 1.0)
+    raindrops (0.8.0)
     ratom (0.6.10)
       libxml-ruby (>= 1.1.2)
     soup (1.0.9)
+    unicorn (4.2.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     vanilla (1.17.2)
       BlueCloth (>= 1.0.0)
       RedCloth (>= 4.1.1)
@@ -28,4 +34,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  unicorn
   vanilla (= 1.17.2)
