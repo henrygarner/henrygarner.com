@@ -1,5 +1,6 @@
 {
   "id" : "henrygarner.com",
+  "bind_domains" : "henrygarner.com henrygarner.co.uk", 
   "repository" : "git@github.com:henrygarner/henrygarner.com.git",
   "deploy_to" : "/srv/henrygarner.com",
   "revision" : "HEAD",

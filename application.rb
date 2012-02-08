@@ -20,6 +20,11 @@ Application.configure do |config|
   # unless you really know what you are doing.
   config.soups = [
     "soups/base",
+    "soups/bio",
+    "soups/blog",
+    "soups/dynasnips",
+    "soups/extras",
+    "soups/site",
     "soups/system"
   ]
 

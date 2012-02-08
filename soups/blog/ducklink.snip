@@ -1,0 +1,17 @@
+# {title} #
+
+[Ducklink](https://github.com/henrygarner/ducklink) is a [ruby gem](http://rubygems.org/gems/ducklink) I created to manipulate URLs according to a set of rules.
+
+Rules are expressed in a custom DSL which aims to make the intention very clear.
+
+{gist 1772834}
+
+In the example above, a template is provided to a fictional affiliate provider, _affiliate.example.com_. The `template` function defines three custom variables, `reference`, `url` and `campaign`.
+
+The only privileged parameter is `url`, which corresponds to the original url supplied to Ducklink. Other parameters are simply tokens which correspond to symbols passed to `set` inside the host blocks. Because host blocks list the hosts to which they apply, parameters can be defined on a per-host basis (the difference between 'campaign1' and 'campaign2' in the example above).
+
+Host blocks accept a `context` argument which is a hash of values passed to Ducklink at runtime. Runtime configuration allows completely unique URLs to be generated on the fly for analytics or tracking.
+
+:title: Ducklink
+:kind: blog
+:render_as: Markdown

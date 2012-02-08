@@ -1,4 +1,5 @@
 source :rubygems
 
-gem 'vanilla', '1.17.2'
+gem 'vanilla'
 gem 'unicorn'
+gem 'coderay'

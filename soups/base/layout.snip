@@ -1,15 +1,23 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <title>{page_title}</title>
-  <link rel="stylesheet" href="/vanilla.css" type="text/css" media="screen" title="no title" charset="utf-8">
-</head>
-<body>
-  <div class="container clearfix">
-    <div id="content" class="grid_12 alpha">
+  <head>
+    <meta charset="utf-8">
+    <title>{title}</title>
+    <meta name="author" content="Henry Garner">
+    <meta name="description" content="The blog of Henry Garner, developer and CTO of Likely Ltd">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container main">
       {current_snip}
     </div>
-  </div>
-</body>
+    <div class="container">
+    {footer}
+    </div>
+  </body>
 </html>

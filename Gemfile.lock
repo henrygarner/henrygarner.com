@@ -4,6 +4,7 @@ GEM
     BlueCloth (1.0.1)
     RedCloth (4.2.9)
     blankslate (2.1.2.4)
+    coderay (1.0.5)
     haml (3.1.4)
     kgio (2.7.2)
     libxml-ruby (2.2.2)
@@ -34,5 +35,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  coderay
   unicorn
-  vanilla (= 1.17.2)
+  vanilla
