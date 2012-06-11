@@ -6,7 +6,7 @@ Fortunately [Martin Wimpress](http://blog.flexion.org/2012/01/16/install-sun-jav
 
 ## Chef Java Cookbook ##
 
-I use [Chef](http://www.opscode.com/chef/) to manage server my server configuration so I created a Chef cookbook that wraps Martin's script to install Java. You can download it from [https://github.com/henrygarner/java](https://github.com/henrygarner/java). It only has one default recipe which downloads and executes Martin's script.
+I use [Chef](http://www.opscode.com/chef/) to manage server my server configuration so I created a Chef cookbook that wraps Martin's script to install Java. You can download it from [https://github.com/henrygarner/java](https://github.com/henrygarner/java).
 
 The default configuration will install the `sun-java6-jdk` package from the local repository. If you'd like to install `oracle-java7-jdk` instead, set the `node[:java][:jdk_version]` to '7'.
 
