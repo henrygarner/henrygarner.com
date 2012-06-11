@@ -6,7 +6,7 @@ Fortunately [Martin Wimpress](http://blog.flexion.org/2012/01/16/install-sun-jav
 
 ## Chef Java Cookbook ##
 
-I use [Chef](http://www.opscode.com/chef/) to manage server my server configuration so I created a Chef cookbook that wraps Martin's script to install Java. You can download it from [http://github.com/henrygarner/java.git](http://github.com/henrygarner/java.git). It only has one default recipe which downloads and executes Martin's script.
+I use [Chef](http://www.opscode.com/chef/) to manage server my server configuration so I created a Chef cookbook that wraps Martin's script to install Java. You can download it from [https://github.com/henrygarner/java](https://github.com/henrygarner/java). It only has one default recipe which downloads and executes Martin's script.
 
 The default configuration will install the `sun-java6-jdk` package from the local repository. If you'd like to install `oracle-java7-jdk` instead, set the `node[:java][:jdk_version]` to '7'.
 
@@ -19,6 +19,7 @@ I download the [Java](https://github.com/henrygarner/java) and [Hadoop](https://
 {gist 2907213}
 
 Running `vagrant up` from the directory containing the Vagrantfile initiates the configuration process, downloading the base virtual machine if it isn't already locally installed, and then executing the cookbook code on top. After about 10 minutes I have a local development Hadoop installation accessible via `vagrant ssh`.
+
 
 :title: Chef Cookbook for Java on Ubuntu
 :kind: blog
